@@ -1,6 +1,7 @@
 # 2309. 일곱 난쟁이
 
-def comb(arr, n):
+## 1
+def combination(arr, n):
     global flag
     
     if flag: return
@@ -12,10 +13,26 @@ def comb(arr, n):
     
     for i in range(n, 9):
         arr.append(A[i])
-        comb(arr, n+1)
+        combination(arr, n+1)
         arr.pop()
 
 
 A = [int(input()) for _ in range(9)]
 flag = 0
-comb([], 0)
+combination([], 0)
+
+
+## 2
+# A = [int(input()) for _ in range(9)]
+# A_sum = sum(A)
+
+# for i in A:
+#     for j in A:
+#         if i == j: continue
+#         if A_sum - (i+j) == 100:
+#             A.remove(i)
+#             A.remove(j)
+#             print(*sorted(A), sep='\n')
+#             break
+#     if len(A) == 7:
+#         break
