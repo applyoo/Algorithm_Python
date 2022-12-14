@@ -14,7 +14,7 @@ while 1:
         nums = nums[1:]
         break
     nums.append(nums[-1] + len(nums))
-
+print(nums)
 for i in range(len(nums)):
     for j in range(i, len(nums)):
         for k in range(j, len(nums)):
